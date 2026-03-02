@@ -3,7 +3,11 @@ import json
 import time
 
 # [설정] 페이지 기본 설정
-st.set_page_config(page_title="동화 만들기 마법사", page_icon="✨", layout="centered")
+st.set_page_config(
+    page_title="동화 만들기 마법사", 
+    page_icon="https://cdn-icons-png.flaticon.com/512/884/884417.png", 
+    layout="centered"
+)
 
 # [CSS] 파트너님의 귀여운 폰트와 스타일 적용
 st.markdown("""
@@ -129,4 +133,5 @@ if st.session_state.current_stage >= 4:
     
     if st.button("🔄 새 이야기 만들기", use_container_width=True):
         st.session_state.clear()
+
         st.rerun()
